@@ -12,7 +12,18 @@ export default class List extends Component{
             }
         }
     }
-    componentWillMount(){
+    scroll=(e)=>{
+        let scrollTop=e.target.scrollTop;
+        let offsetHeight=e.target.offsetHeight;
+        let scrollHeight=e.target.scrollHeight;
+        clearTimeout(this.timer);
+        this.timer=setTimeout(()=>{
+            if(scrollTop+offsetHeight+50>scrollHeight){
+                this.getinfo()
+            }
+        },50)
+    };
+    getinfo=()=>{
         let resgetHotArticleList='http://127.0.0.1:9090/api/getHotArticleList';
         fetch(resgetHotArticleList,{
             headers:{
@@ -21,23 +32,32 @@ export default class List extends Component{
         }).then((res)=>{
             return res.json();
         }).then(data => {
-        console.log(data);
-            this.setState({articleInfo:data});
+            let articleInfo=this.state.articleInfo;
+            let articleInfos=articleInfo.data.results;
+            if(articleInfos.length){
+                articleInfos.push(...data.data.results);
+                articleInfo.data.results=articleInfos;
+                this.setState({articleInfo});
+
+            }else{
+                this.setState({articleInfo:data});
+            }
+
         });
+    };
+    componentWillMount(){
+      this.getinfo()
     }
 
     render(){
 
         let results=this.state.articleInfo.data.results;
-        //console.log(results.images);
-
-           // console.log(results);
 
 
         return (
             <div>
                   <MHeader/>
-                <ul className="content" ref="scroll">
+                <ul className="content" ref="scroll" onScroll={(e)=>this.scroll(e)}>
 
                     {results.length? results.map((item,index)=>{
                             // let img =item.images||[];
@@ -79,11 +99,7 @@ export default class List extends Component{
                                     )
 
                         }):<div className="loading">正在加载</div>}
-
-
                 </ul>
-
-
             </div>
         )
     }

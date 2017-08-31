@@ -12,7 +12,8 @@ export default class Home extends Component{
             <Router>
                 <div>
                     <RankTab></RankTab>
-                <Route exact path={'/home'} component={Rank}/>
+                <Route exact path={'/'} component={Rank}/>
+                <Route path={'/home'} component={Rank}/>
                 <Route path={'/home/rank'} component={Rank}/>
                 <Route path={'/home/today'} component={Today}/>
                 <Route path={'/home/food'} component={Food}/>

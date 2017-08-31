@@ -17,7 +17,17 @@ export default class Rank extends Component{
             }
         }
     }
-
+    scroll=(e)=>{
+        let scrollTop=e.target.scrollTop;
+        let offsetHeight=e.target.offsetHeight;
+        let scrollHeight=e.target.scrollHeight;
+        clearTimeout(this.timer);
+        this.timer=setTimeout(()=>{
+            if(scrollTop+offsetHeight+50>scrollHeight){
+                this.getInfo()
+    }
+        },50)
+    }
     getInfo=()=>{
         let resCity = 'http://127.0.0.1:9090/api/city';
         fetch(resCity,{
@@ -27,13 +37,17 @@ export default class Rank extends Component{
         }).then((res)=>{
             return res.json();
         }).then(data => {
-            console.log(data);
-
-            setTimeout(()=>{
-                this.setState({rankInfo: data});
-            },200)
-
-
+            let rankInfo=this.state.rankInfo;
+            let datas=rankInfo.data.results;
+            if (datas.length){
+                datas.push(...data.data.results);
+                rankInfo.data.results=datas;
+                    this.setState({rankInfo});
+            }else{
+                setTimeout(()=>{
+                    this.setState({rankInfo: data});
+                },200)
+            }
         }).catch(err=>{
             debugger
         })
@@ -41,11 +55,11 @@ export default class Rank extends Component{
     componentDidMount() {
         this.getInfo();
     }
+
     render(){
         let {results} = this.state.rankInfo.data;
-        console.log(results);
         return (
-            <ul className="rankLists">
+            <ul className="rankLists" onScroll={(e)=>this.scroll(e)}>
                 {
                     results.length?results.map((item,index)=>{
                         return(
@@ -53,7 +67,7 @@ export default class Rank extends Component{
                         <li className="listInfo">
                             <div className="userInfo">
                                 <img src={userIcon} alt="icon" className="userIcon"/>
-                                <span className="userName">{item.user.nick}</span>
+                                <span className="userName">{item.user.nick?item.user.nick:null}</span>
                                 <span>
                                     {
 
@@ -86,9 +100,7 @@ export default class Rank extends Component{
                     }
 
                     ):<div className="loadings"><p>加载中........</p></div>
-
                 }
-
             </ul>
 
         )
