@@ -1,0 +1,16 @@
+.rankTab {
+  display: flex;
+  background-color: lightcoral;
+  height: 45px;
+}
+.rankTab a {
+  flex: 1;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+.rankTab a .active {
+  color: lawngreen;
+}

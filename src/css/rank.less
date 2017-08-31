@@ -1,0 +1,82 @@
+.rankLists{
+  position: absolute;
+  background-color: #dfdde6;
+  width: 100%;
+  top:45px;
+  bottom: 50px;
+  overflow-y: scroll;
+  .loadings{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 100%;
+    font-size: 25px;
+    background-color: #fff;
+    z-index: 99;
+    p{
+      position: absolute;
+      top: 50%;
+      margin-top: -75px;
+      left: 50%;
+      margin-left: -35px;
+    }
+  }
+  .listInfo{
+    background-color: #fff;
+    margin-bottom: 5px;
+    .userInfo{
+      position: relative;
+      height: 100px;
+      border-bottom: 1px #dfdde6 solid;
+      .userIcon{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 10px 15px 10px 5px;
+      }
+      .userName{
+        position: absolute;
+        top:10px;
+        color: #8d8c92;
+      }
+      .age{
+        height: 25px;
+        //margin-right: 10px;
+      }
+      .gradeName{
+        height: 25px;
+      }
+      .num{
+        position: relative;
+        top:-7px;
+        left:-28px;
+        font-size: 14px;
+      }
+      #ageF{
+        color: #ff3050;
+      }
+      #ageM{
+        color: #79aabb;
+      }
+      #gradeName{
+        position: relative;
+        top:-7px;
+        left:-33px;
+        font-size: 14px;
+        color: #ff3050;
+      }
+    }
+    .contents{
+      padding: 10px;
+      p{
+        color: #131117;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      
+    }
+  }
+
+}

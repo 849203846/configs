@@ -1,0 +1,79 @@
+.rankLists {
+  position: absolute;
+  background-color: #dfdde6;
+  width: 100%;
+  top: 45px;
+  bottom: 50px;
+  overflow-y: scroll;
+}
+.rankLists .loadings {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100%;
+  font-size: 25px;
+  background-color: #fff;
+  z-index: 99;
+}
+.rankLists .loadings p {
+  position: absolute;
+  top: 50%;
+  margin-top: -75px;
+  left: 50%;
+  margin-left: -35px;
+}
+.rankLists .listInfo {
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+.rankLists .listInfo .userInfo {
+  position: relative;
+  height: 100px;
+  border-bottom: 1px #dfdde6 solid;
+}
+.rankLists .listInfo .userInfo .userIcon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 10px 15px 10px 5px;
+}
+.rankLists .listInfo .userInfo .userName {
+  position: absolute;
+  top: 10px;
+  color: #8d8c92;
+}
+.rankLists .listInfo .userInfo .age {
+  height: 25px;
+}
+.rankLists .listInfo .userInfo .gradeName {
+  height: 25px;
+}
+.rankLists .listInfo .userInfo .num {
+  position: relative;
+  top: -7px;
+  left: -28px;
+  font-size: 14px;
+}
+.rankLists .listInfo .userInfo #ageF {
+  color: #ff3050;
+}
+.rankLists .listInfo .userInfo #ageM {
+  color: #79aabb;
+}
+.rankLists .listInfo .userInfo #gradeName {
+  position: relative;
+  top: -7px;
+  left: -33px;
+  font-size: 14px;
+  color: #ff3050;
+}
+.rankLists .listInfo .contents {
+  padding: 10px;
+}
+.rankLists .listInfo .contents p {
+  color: #131117;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
