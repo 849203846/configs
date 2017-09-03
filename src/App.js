@@ -10,12 +10,13 @@ import './index.less';
 import Sign from './conponent/sign';
 import Sigin from "./conponent/my/Sigin/index";
 import Register from "./conponent/my/register/index";
+import Navigation from './conponent/List/Navigation/index.js'
+import  Content from  './conponent/List/Content/index.js'
 export default class App extends Component{
     render(){
         return(
             <Router>
                 <Index>
-
                     <Route
                         exact
                         path={"/"}
@@ -51,7 +52,12 @@ export default class App extends Component{
                         path={"/my/register"}
                         component={Register}
                     />
-
+                    <Route path={"/content"} component={Content}/>
+                    <Route path={"/navigation1"} component={Navigation}/>
+                    <Route path={"/navigation2"} component={Navigation}/>
+                    <Route path={"/navigation3"} component={Navigation}/>
+                    <Route path={"/navigation4"} component={Navigation}/>
+                    <Route path={"/navigation5"} component={Navigation}/>
                 </Index>
             </Router>
         )

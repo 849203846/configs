@@ -1,0 +1,65 @@
+.icon {
+  position: relative;
+  height: 56px;
+}
+.nav-Content {
+  height: 56px;
+}
+.header-Icon {
+  position: absolute;
+  color: #dddddf;
+  display: inline-block;
+  padding-left: 10px;
+  top: 18px;
+  left: 0;
+  font-size: 23px;
+  width: 30px;
+  height: 30px;
+}
+.One-content {
+  margin: 5px 5px;
+  z-index: 2000;
+  position: fixed;
+  overflow: scroll;
+  width: 100%;
+  overflow-x: hidden;
+  top: 56px;
+  bottom: 0;
+  background: #ffffff;
+}
+.Navigation_list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Navigation_list .nav-itemList {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.Navigation_list .nav-itemList img {
+  padding: 3px;
+  flex: 1;
+  width: 130px;
+  height: 130px;
+}
+.Navigation_list .nav-itemList .nav-itemContent {
+  padding-left: 8px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.Navigation_list .nav-itemList .nav-itemContent h4 {
+  color: #333333;
+  font-weight: 500;
+}
+.Navigation_list .nav-itemList .nav-itemContent p {
+  padding-right: 5px;
+  color: #8d8c92;
+  display: block;
+  padding-top: 10px;
+  font-size: 13px;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,6 +1,10 @@
 import React,{Component} from 'react';
 import MHeader from "./MHeader/index";
 import './index.less';
+import Swiper from "./Swiper/index";
+import Nav from "./Nav/index";
+import {Link} from 'react-router-dom'
+
 export default class List extends Component{
     constructor(){
         super();
@@ -58,10 +62,12 @@ export default class List extends Component{
             <div>
                   <MHeader/>
                 <ul className="content" ref="scroll" onScroll={(e)=>this.scroll(e)}>
-
+                    <Swiper/>
+                    <Nav/>
                     {results.length? results.map((item,index)=>{
                             // let img =item.images||[];
                             return(
+                                <Link to={{pathname:'/content',state:item}} key={index}>
                                 <li className="articleList" key={index}>
                                     <div className="articleList-Header">
                                         <div className="header-Left">
@@ -96,7 +102,7 @@ export default class List extends Component{
                                         </div>
                                     </div>
                                 </li>
-                                    )
+                                </Link>  )
 
                         }):<div className="loading">正在加载</div>}
                 </ul>

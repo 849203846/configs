@@ -1,0 +1,52 @@
+
+.nav-Content {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #dddddf;
+  span {
+    //flex: 1;
+    &:before {
+      text-align: center;
+      display: block;
+      line-height: 56px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #6d6b70;
+    padding: 5px 0;
+    text-align: center;
+    flex: 1;
+    font-size: 12px;
+    .nav-img {
+      display: block;
+      margin: 0 auto;
+      background-size: cover;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+    }
+    .nav-Food {
+      background: url(../images/food.png) no-repeat;
+    }
+
+    .nav-Movie {
+      background: url(../images/movie.png) no-repeat;
+    }
+    .nav-Party {
+      background: url(../images/party.png) no-repeat;
+    }
+    .nav-Music {
+      background: url(../images/music.png) no-repeat;
+    }
+    .nav-Play{
+      background: url(../images/play.png) no-repeat;
+    }
+
+  }
+  .active {
+    color: red;
+    border-bottom: 2px solid red;
+  }
+}

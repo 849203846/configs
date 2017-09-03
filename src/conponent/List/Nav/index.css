@@ -1,0 +1,45 @@
+.nav-Content {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #dddddf;
+}
+.nav-Content span:before {
+  text-align: center;
+  display: block;
+  line-height: 56px;
+}
+.nav-Content a {
+  text-decoration: none;
+  color: #6d6b70;
+  padding: 5px 0;
+  text-align: center;
+  flex: 1;
+  font-size: 12px;
+}
+.nav-Content a .nav-img {
+  display: block;
+  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+.nav-Content a .nav-Food {
+  background: url(../images/food.png) no-repeat;
+}
+.nav-Content a .nav-Movie {
+  background: url(../images/movie.png) no-repeat;
+}
+.nav-Content a .nav-Party {
+  background: url(../images/party.png) no-repeat;
+}
+.nav-Content a .nav-Music {
+  background: url(../images/music.png) no-repeat;
+}
+.nav-Content a .nav-Play {
+  background: url(../images/play.png) no-repeat;
+}
+.nav-Content .active {
+  color: red;
+  border-bottom: 2px solid red;
+}
