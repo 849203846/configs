@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import './index.less';
+import './index.less'
+import {Link} from 'react-router-dom'
 export default class Sigin extends Component{
     constructor(){
         super();
@@ -57,9 +58,10 @@ export default class Sigin extends Component{
                         id="password"
                         value={this.state.password}
                         onChange={event=>this.setState({password:event.target.value})} />
+                        <Link className="register" to="/my/register">前往注册</Link>
                     </li>
-                    <li><button onClick={this.btns}>前往注册</button></li>
-                    <li><button onClick={this.btn}>登录</button></li>
+
+                    <li><button className="btn" onClick={this.btn}>登录</button></li>
                 </div>
 
             </div>

@@ -18,9 +18,8 @@ export default class Friend extends
         }).then((res)=>{
             return res.json();
         }).then(data => {
-            console.log(data);
             this.setState({results:data.data.results});
-            console.log(this.state.results);
+
         });
     }
     render(){

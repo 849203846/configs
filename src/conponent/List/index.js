@@ -92,7 +92,7 @@ export default class List extends Component{
                                     <div className="articleList-Context">
                                         <h3>{item.title}</h3>
                                         <p>{item.content}</p>
-                                        <img  alt=""/>
+                                        {/*<img  alt=""/>*/}
                                     </div>
                                     <div className="articleList-Footer">
                                         <span className="footer-left">{item.count.pageview}</span>

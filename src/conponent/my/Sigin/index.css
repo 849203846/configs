@@ -27,7 +27,14 @@
   width: 90%;
   border: 1px solid #5e5e5e;
 }
-.sigins .sigin li button {
+.sigins .sigin li .register {
+  font-size: 14px;
+  color: white;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+.sigins .sigin li .btn {
   background: red;
   color: white;
   border: 1px solid red;

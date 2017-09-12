@@ -24,7 +24,6 @@ http.createServer((req, res)=> {
     let {pathname} = url.parse(req.url);
     res.setHeader('Access-Control-Allow-Origin', '*');
     if(pathname === '/api/city'){
-
         proxy((result)=>{
             res.end(JSON.stringify(result.data));
         });

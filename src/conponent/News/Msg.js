@@ -27,8 +27,8 @@ export default class Msg extends
             <div className="msg">
                 <div>
                     <ul>
-                        <li>1</li>
-                        {}
+                        <li className="centent">暂无消息</li>
+
                     </ul>
                 </div>
             </div>
