@@ -98,7 +98,7 @@ export default class List extends Component{
                                         <span className="footer-left">{item.count.pageview}</span>
                                         <div className="footer-right">
                                             <span className="footer-rl">{item.count.reviewNum}</span>
-                                            <span className="footer-rr">{item.count.zanNum}</span>
+                                              <span className="footer-rr">{item.count.zanNum}</span>
                                         </div>
                                     </div>
                                 </li>
